@@ -1,0 +1,14 @@
+{
+  "installCommand": "cd Frontend && npm ci",
+  "buildCommand": "cd Frontend && npm run build",
+  "outputDirectory": "Frontend/dist/client",
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/_shell.html"
+    }
+  ]
+}
