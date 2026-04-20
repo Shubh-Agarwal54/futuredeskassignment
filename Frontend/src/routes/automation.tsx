@@ -79,11 +79,11 @@ function AutomationSetup() {
         </header>
 
         {/* Toolbar */}
-        <div className="px-6 py-3 border-b border-border flex items-center justify-between bg-card">
-          <div className="flex items-center gap-2">
+        <div className="px-6 py-3 border-b border-border bg-card flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <button
               onClick={() => setTab("canvas")}
-              className={`inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium ${
+              className={`inline-flex shrink-0 whitespace-nowrap items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium ${
                 tab === "canvas"
                   ? "border-primary bg-primary-soft text-primary-soft-foreground"
                   : "border-border text-foreground hover:bg-muted"
@@ -94,7 +94,7 @@ function AutomationSetup() {
             </button>
             <button
               onClick={() => setTab("new")}
-              className={`inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium ${
+              className={`inline-flex shrink-0 whitespace-nowrap items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium ${
                 tab === "new"
                   ? "border-primary bg-primary-soft text-primary-soft-foreground"
                   : "border-border text-foreground hover:bg-muted"
@@ -104,11 +104,11 @@ function AutomationSetup() {
               New Automation
             </button>
           </div>
-          <label className="inline-flex items-center gap-3 cursor-pointer">
-            <span className="text-sm font-medium text-foreground">Go Live</span>
+          <label className="inline-flex items-center gap-3 cursor-pointer self-start sm:self-auto">
+            <span className="text-sm font-medium text-foreground whitespace-nowrap">Go Live</span>
             <span
               onClick={() => setGoLive((v) => !v)}
-              className={`relative h-6 w-11 rounded-full transition-colors ${
+              className={`relative h-6 w-11 shrink-0 rounded-full transition-colors ${
                 goLive ? "bg-emerald-500" : "bg-muted"
               }`}
             >
