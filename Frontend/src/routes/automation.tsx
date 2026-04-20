@@ -19,6 +19,7 @@ import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { TextField } from "@/components/ui/TextField";
 import { PhoneFrame, PostPreview, DmPreview } from "@/components/automation/PhonePreview";
 import postGrid from "@/assets/post-grid.jpg";
+import reelsimg from "@/assets/reelsimg.png";
 
 export const Route = createFileRoute("/automation")({
   head: () => ({
@@ -128,7 +129,7 @@ function AutomationSetup() {
               {/* Posts */}
               <SectionCard icon={ImageIcon} title="Select Specific Post or Reel">
                 <img
-                  src={postGrid}
+                  src={reelsimg}
                   alt="Instagram posts and reels grid"
                   className="w-full rounded-lg"
                 />
@@ -287,7 +288,7 @@ function AutomationSetup() {
             </div>
 
             {/* Phone previews column */}
-            <div className="space-y-10 pt-4 lg:pl-10">
+            <div className="space-y-10 pt-4 lg:pl-10 ">
               <PhoneFrame>
                 <PostPreview />
               </PhoneFrame>
